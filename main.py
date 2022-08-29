@@ -2,6 +2,7 @@ import argparse
 
 from reverse_string import reverse_string
 from reverse_words import reverse_words
+from utils import get_file_content
 
 parser = argparse.ArgumentParser()
 
@@ -13,7 +14,7 @@ if __name__ == '__main__':
     args = parser.parse_args()
 
     if args.reverse_word:
-        reverse_words(args.reverse_word)
+        reverse_words(get_file_content(args.reverse_word))
 
     if args.reverse_string:
-        reverse_string(args.reverse_string)
+        reverse_string(get_file_content(args.reverse_string))
